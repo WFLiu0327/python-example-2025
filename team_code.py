@@ -117,7 +117,7 @@ def train_model(data_folder, model_folder, verbose):
     train_records = [full_dataset.records[i] for i in train_subset.indices]
     val_records = [full_dataset.records[i] for i in val_subset.indices]
 
-    train_dataset = ECGDataset(data_path=data_folder, records=train_records, oversample_factor=20)  # 只对训练集过采样
+    train_dataset = ECGDataset(data_path=data_folder, records=train_records, oversample_factor=10)  # 只对训练集过采样
     val_dataset = ECGDataset(data_path=data_folder, records=val_records, oversample_factor=1)  # 验证集不变
 
 
